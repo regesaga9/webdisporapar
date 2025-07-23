@@ -1,0 +1,1667 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Blogxer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-29 06:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.0; wp-5.6\n"
+"X-Domain: blogxer"
+
+#: inc/views/comments-callback.php:27
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: inc/general.php:359
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: inc/redux-config.php:315
+msgid "1 Column"
+msgstr ""
+
+#: inc/redux-config.php:130
+msgid "1140px"
+msgstr ""
+
+#: inc/redux-config.php:129
+msgid "1240px"
+msgstr ""
+
+#: inc/redux-config.php:128
+msgid "1350px"
+msgstr ""
+
+#: inc/redux-config.php:316
+msgid "2 Column"
+msgstr ""
+
+#: inc/redux-config.php:317
+msgid "3 Column"
+msgstr ""
+
+#: inc/redux-config.php:318
+msgid "4 Column"
+msgstr ""
+
+#: inc/redux-config.php:1593
+msgid "5"
+msgstr ""
+
+#: inc/redux-config.php:1625
+msgid "8"
+msgstr ""
+
+#: inc/redux-config.php:727
+msgid "Activate Ad"
+msgstr ""
+
+#: inc/redux-config.php:693
+msgid "Active Breadcrumb Color"
+msgstr ""
+
+#: inc/redux-config.php:735
+msgid "Ad Type"
+msgstr ""
+
+#: inc/sidebar-generator.php:40
+msgid "Add"
+msgstr ""
+
+#: inc/sidebar-generator.php:31
+msgid "Add New Sidebar"
+msgstr ""
+
+#: woocommerce/add-to-wishlist-button.php:17
+msgid "Add to Wishlist"
+msgstr ""
+
+#: inc/redux-config.php:1943
+msgid "Additional Information Tab"
+msgstr ""
+
+#: inc/redux-config.php:213
+msgid "Address"
+msgstr ""
+
+#: inc/redux-config.php:790
+msgid "Advertisements"
+msgstr ""
+
+#: inc/redux-config.php:819
+msgid "After Page Contents"
+msgstr ""
+
+#: inc/redux-config.php:801
+msgid "After Post Contents"
+msgstr ""
+
+#: inc/redux-config.php:1657
+msgid "Alignment of the caption"
+msgstr ""
+
+#: template-parts/header/product-search-form.php:11
+msgid "All Categories"
+msgstr ""
+
+#: template-parts/content-banner.php:19
+msgid "All Posts"
+msgstr ""
+
+#: woocommerce/add-to-wishlist.php:27 woocommerce/add-to-wishlist.php:34
+msgid "Already added in Wishlist. Click here to view Wishlist"
+msgstr ""
+
+#: inc/redux-config.php:179
+msgid "Alternative Preview Image"
+msgstr ""
+
+#: inc/redux-config.php:377 inc/redux-config.php:385 inc/redux-config.php:540
+msgid "Applied when Transparent Header is enabled"
+msgstr ""
+
+#. Name of the template
+msgid "Archive style 1"
+msgstr ""
+
+#. Name of the template
+msgid "Archive style 2"
+msgstr ""
+
+#: inc/sidebar-generator.php:194
+msgid "Are you sure you want to remove this custom sidebar"
+msgstr ""
+
+#: inc/general.php:277
+msgid "Author Designation"
+msgstr ""
+
+#: inc/woo-functions.php:157
+msgid "Average"
+msgstr ""
+
+#: inc/redux-config.php:155
+msgid "Back to Top Arrow"
+msgstr ""
+
+#: inc/redux-config.php:1200
+msgid "Background Color"
+msgstr ""
+
+#: inc/redux-config.php:1201
+msgid "Background Image"
+msgstr ""
+
+#: inc/redux-config.php:641 inc/redux-config.php:1181
+msgid "Banner"
+msgstr ""
+
+#: inc/redux-config.php:1218
+msgid "Banner Background Color"
+msgstr ""
+
+#: inc/redux-config.php:1209
+msgid "Banner Background Image"
+msgstr ""
+
+#: inc/redux-config.php:706
+msgid "Banner Background Overlay opacity"
+msgstr ""
+
+#: inc/redux-config.php:1198
+msgid "Banner Background Type"
+msgstr ""
+
+#: inc/redux-config.php:650
+msgid "Banner Heading Color"
+msgstr ""
+
+#: inc/redux-config.php:818
+msgid "Before Page Contents"
+msgstr ""
+
+#: inc/redux-config.php:800
+msgid "Before Post Contents"
+msgstr ""
+
+#: inc/helper-functions.php:147 inc/redux-config.php:243
+msgid "Behance"
+msgstr ""
+
+#: inc/redux-config.php:1262
+msgid "Blog / Archive"
+msgstr ""
+
+#. Name of the template
+msgid "Blog 1"
+msgstr ""
+
+#. Name of the template
+msgid "Blog 2"
+msgstr ""
+
+#. Name of the template
+msgid "Blog 3"
+msgstr ""
+
+#. Name of the template
+msgid "Blog 4"
+msgstr ""
+
+#: inc/redux-config.php:1335
+msgid "Blog Settings"
+msgstr ""
+
+#: inc/redux-config.php:840
+msgid "Blog/Archive"
+msgstr ""
+
+#: inc/redux-config.php:1343
+msgid "Blog/Archive Layout"
+msgstr ""
+
+#. Name of the theme
+msgid "Blogxer"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Blogxer is a clean and Modern WordPress Theme. It is best suited for "
+"Creative blog theme"
+msgstr ""
+
+#: inc/redux-config.php:28 inc/redux-config.php:30
+msgid "Blogxer Options"
+msgstr ""
+
+#: inc/redux-config.php:1023
+msgid "Body"
+msgstr ""
+
+#: inc/redux-config.php:1787
+msgid "Body Background Color"
+msgstr ""
+
+#: inc/redux-config.php:1793
+msgid "Body Banner"
+msgstr ""
+
+#: inc/redux-config.php:1801
+msgid "Body Text 1"
+msgstr ""
+
+#: inc/redux-config.php:1814
+msgid "Body Text 1 Color"
+msgstr ""
+
+#: inc/redux-config.php:1807
+msgid "Body Text 2"
+msgstr ""
+
+#: inc/redux-config.php:1821
+msgid "Body Text 2 Color"
+msgstr ""
+
+#: inc/redux-config.php:126
+msgid "Bootstrap Grid Container Width size for site."
+msgstr ""
+
+#: inc/redux-config.php:1189
+msgid "Breadcrumb"
+msgstr ""
+
+#: inc/redux-config.php:679
+msgid "Breadcrumb Link Color"
+msgstr ""
+
+#: inc/redux-config.php:686
+msgid "Breadcrumb Link Hover Color"
+msgstr ""
+
+#: inc/redux-config.php:700
+msgid "Breadcrumb Seperator Color"
+msgstr ""
+
+#: inc/redux-config.php:664
+msgid "Breadcrumbs Delimiter"
+msgstr ""
+
+#: inc/redux-config.php:1827
+msgid "Button Text"
+msgstr ""
+
+#: inc/redux-config.php:1656
+msgid "Caption alignment"
+msgstr ""
+
+#: inc/redux-config.php:468
+msgid "Cart Icon"
+msgstr ""
+
+#: inc/redux-config.php:1951
+msgid "Cart Page"
+msgstr ""
+
+#: inc/redux-config.php:1903
+msgid "Categories"
+msgstr ""
+
+#: inc/woo-functions.php:178 woocommerce/single-product/meta.php:35
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/redux-config.php:1661
+msgid "Center"
+msgstr ""
+
+#: comments.php:14 comments.php:16 template-parts/content-1.php:18
+#: template-parts/content-2.php:14 template-parts/content-3.php:17
+#: template-parts/content-4.php:18 template-parts/content-search.php:17
+#: template-parts/content-single-2.php:11
+#: template-parts/content-single-3.php:11 template-parts/content-single.php:11
+#: template-parts/content.php:18
+msgid "Comment"
+msgstr ""
+
+#: comments.php:67
+msgid "Comment *"
+msgstr ""
+
+#: comments.php:12 template-parts/content-1.php:18
+#: template-parts/content-2.php:14 template-parts/content-3.php:17
+#: template-parts/content-4.php:18 template-parts/content-search.php:17
+#: template-parts/content-single-2.php:11
+#: template-parts/content-single-3.php:11 template-parts/content-single.php:11
+#: template-parts/content.php:18
+msgid "Comments"
+msgstr ""
+
+#: comments.php:48
+msgid "Comments are closed."
+msgstr ""
+
+#: inc/redux-config.php:191
+msgid "Contact & Socials"
+msgstr ""
+
+#: inc/redux-config.php:125
+msgid "Container width( Bootstrap Grid )"
+msgstr ""
+
+#: inc/redux-config.php:1174
+msgid "Content Padding Bottom"
+msgstr ""
+
+#: inc/redux-config.php:1167
+msgid "Content Padding Top"
+msgstr ""
+
+#: inc/redux-config.php:978
+msgid "Copyright Area"
+msgstr ""
+
+#: inc/redux-config.php:993
+msgid "Copyright Background Color"
+msgstr ""
+
+#: inc/redux-config.php:1008
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/redux-config.php:1001
+msgid "Copyright Text Color"
+msgstr ""
+
+#: inc/redux-config.php:1957
+msgid "Cross Sell Products"
+msgstr ""
+
+#: inc/redux-config.php:738 inc/redux-config.php:779
+msgid "Custom Code"
+msgstr ""
+
+#: inc/redux-config.php:1159
+msgid "Custom Sidebar"
+msgstr ""
+
+#: inc/scripts.php:134
+msgid "Day"
+msgstr ""
+
+#: inc/redux-config.php:1927
+msgid "Description Tab"
+msgstr ""
+
+#: inc/redux-config.php:139 inc/redux-config.php:157 inc/redux-config.php:164
+#: inc/redux-config.php:172 inc/redux-config.php:327 inc/redux-config.php:336
+#: inc/redux-config.php:345 inc/redux-config.php:354 inc/redux-config.php:462
+#: inc/redux-config.php:470 inc/redux-config.php:478 inc/redux-config.php:658
+#: inc/redux-config.php:672 inc/redux-config.php:729 inc/redux-config.php:762
+#: inc/redux-config.php:771 inc/redux-config.php:896 inc/redux-config.php:986
+#: inc/redux-config.php:1183 inc/redux-config.php:1191
+#: inc/redux-config.php:1865 inc/redux-config.php:1873
+#: inc/redux-config.php:1882 inc/redux-config.php:1897
+msgid "Disabled"
+msgstr ""
+
+#: inc/redux-config.php:1645
+msgid "Display Caption in Post"
+msgstr ""
+
+#: inc/redux-config.php:984
+msgid "Display Copyright Area"
+msgstr ""
+
+#: inc/redux-config.php:894
+msgid "Display Footer Area"
+msgstr ""
+
+#: inc/redux-config.php:163
+msgid "Display No Preview Image on Blog/Archive"
+msgstr ""
+
+#: inc/redux-config.php:171
+msgid "Display No Preview Image on Related Post"
+msgstr ""
+
+#: inc/redux-config.php:1611
+msgid "Display post Order"
+msgstr ""
+
+#: inc/helper-functions.php:152 inc/redux-config.php:249
+msgid "Dribbble"
+msgstr ""
+
+#: comments.php:61 inc/redux-config.php:206
+msgid "Email"
+msgstr ""
+
+#: inc/woo-functions.php:146
+msgid "Email *"
+msgstr ""
+
+#: inc/sidebar-generator.php:69 inc/sidebar-generator.php:116
+msgid "Empty nonce"
+msgstr ""
+
+#: inc/redux-config.php:656
+msgid "Enable Breadcrumb"
+msgstr ""
+
+#: inc/redux-config.php:138 inc/redux-config.php:156 inc/redux-config.php:165
+#: inc/redux-config.php:173 inc/redux-config.php:326 inc/redux-config.php:335
+#: inc/redux-config.php:344 inc/redux-config.php:353 inc/redux-config.php:461
+#: inc/redux-config.php:469 inc/redux-config.php:477 inc/redux-config.php:657
+#: inc/redux-config.php:671 inc/redux-config.php:728 inc/redux-config.php:761
+#: inc/redux-config.php:770 inc/redux-config.php:895 inc/redux-config.php:985
+#: inc/redux-config.php:1182 inc/redux-config.php:1190
+#: inc/redux-config.php:1864 inc/redux-config.php:1872
+#: inc/redux-config.php:1881 inc/redux-config.php:1896
+msgid "Enabled"
+msgstr ""
+
+#: inc/redux-config.php:1367
+msgid "Enter the Post Banner Title"
+msgstr ""
+
+#: inc/redux-config.php:1781
+msgid "Error 404"
+msgstr ""
+
+#: inc/redux-config.php:1305
+msgid "Error 404 Layout"
+msgstr ""
+
+#: inc/redux-config.php:1832
+msgid "Error Page Settings"
+msgstr ""
+
+#: inc/general.php:286 inc/helper-functions.php:127 inc/redux-config.php:219
+msgid "Facebook"
+msgstr ""
+
+#: inc/redux-config.php:799 inc/redux-config.php:817 inc/redux-config.php:835
+#: inc/redux-config.php:850
+msgid "Footer"
+msgstr ""
+
+#: inc/general.php:119
+msgid "Footer (Style 2) 1"
+msgstr ""
+
+#: inc/general.php:120
+msgid "Footer (Style 2) 2"
+msgstr ""
+
+#: inc/general.php:121
+msgid "Footer (Style 2) 3"
+msgstr ""
+
+#: inc/general.php:122
+msgid "Footer (Style 2) 4"
+msgstr ""
+
+#: inc/general.php:125
+msgid "Footer (Style 4) 1"
+msgstr ""
+
+#: inc/general.php:126
+msgid "Footer (Style 4) 2"
+msgstr ""
+
+#: inc/general.php:127
+msgid "Footer (Style 4) 3"
+msgstr ""
+
+#: inc/general.php:128
+msgid "Footer (Style 4) 4"
+msgstr ""
+
+#: inc/general.php:131
+msgid "Footer (style 5) 1"
+msgstr ""
+
+#: inc/general.php:132
+msgid "Footer (style 5) 2"
+msgstr ""
+
+#: inc/general.php:133
+msgid "Footer (style 5) 3"
+msgstr ""
+
+#: inc/general.php:134
+msgid "Footer (style 5) 4"
+msgstr ""
+
+#: inc/redux-config.php:888
+msgid "Footer Area"
+msgstr ""
+
+#: inc/redux-config.php:929
+msgid "Footer Background Color"
+msgstr ""
+
+#: inc/redux-config.php:953
+msgid "Footer Body Link Color"
+msgstr ""
+
+#: inc/redux-config.php:961
+msgid "Footer Body Link Hover Color"
+msgstr ""
+
+#: inc/redux-config.php:945
+msgid "Footer Body Text Color"
+msgstr ""
+
+#: inc/redux-config.php:859
+msgid "Footer Layout"
+msgstr ""
+
+#: inc/redux-config.php:968
+msgid "Footer Logo"
+msgstr ""
+
+#: inc/general.php:177
+msgid "Footer Style 1"
+msgstr ""
+
+#: inc/general.php:201
+msgid "Footer Style 3"
+msgstr ""
+
+#: inc/general.php:210
+msgid "Footer Style 4"
+msgstr ""
+
+#: inc/general.php:219
+msgid "Footer Style 5"
+msgstr ""
+
+#: inc/redux-config.php:937
+msgid "Footer Title Text Color"
+msgstr ""
+
+#: inc/redux-config.php:1151
+msgid "Full Width"
+msgstr ""
+
+#. Name of the template
+msgid "Fullwidth Template"
+msgstr ""
+
+#: inc/redux-config.php:101 inc/redux-config.php:1851
+msgid "General"
+msgstr ""
+
+#: inc/helper-functions.php:177
+msgid "Github"
+msgstr ""
+
+#: inc/redux-config.php:1828
+msgid "GO TO HOME"
+msgstr ""
+
+#: inc/woo-functions.php:156
+msgid "Good"
+msgstr ""
+
+#: inc/helper-functions.php:69
+msgctxt "Google fonts - Source Sans Pro , Playfair Display : on or off"
+msgid "on"
+msgstr ""
+
+#: inc/helper-functions.php:142 inc/redux-config.php:231
+msgid "Google Plus"
+msgstr ""
+
+#: inc/general.php:298
+msgid "Google+"
+msgstr ""
+
+#: inc/redux-config.php:286 inc/redux-config.php:815 inc/redux-config.php:833
+msgid "Header"
+msgstr ""
+
+#: inc/redux-config.php:798 inc/redux-config.php:816 inc/redux-config.php:834
+msgid "Header Below"
+msgstr ""
+
+#: inc/redux-config.php:1040
+msgid "Header h1"
+msgstr ""
+
+#: inc/redux-config.php:1057
+msgid "Header h2"
+msgstr ""
+
+#: inc/redux-config.php:1074
+msgid "Header h3"
+msgstr ""
+
+#: inc/redux-config.php:1091
+msgid "Header h4"
+msgstr ""
+
+#: inc/redux-config.php:1108
+msgid "Header h5"
+msgstr ""
+
+#: inc/redux-config.php:1125
+msgid "Header h6"
+msgstr ""
+
+#: inc/redux-config.php:419
+msgid "Header Layout"
+msgstr ""
+
+#: inc/redux-config.php:343
+msgid "Header On/Off"
+msgstr ""
+
+#: inc/general.php:96
+msgid "Header Right"
+msgstr ""
+
+#: inc/redux-config.php:797
+msgid "Header Top"
+msgstr ""
+
+#: inc/redux-config.php:1905 inc/redux-config.php:1913
+#: inc/redux-config.php:1921 inc/redux-config.php:1929
+#: inc/redux-config.php:1937 inc/redux-config.php:1945
+#: inc/redux-config.php:1959
+msgid "Hide"
+msgstr ""
+
+#: inc/modules/rt-breadcrumbs.php:24
+msgid "Home"
+msgstr ""
+
+#: inc/scripts.php:135
+msgid "Hour"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://radiustheme.com"
+msgstr ""
+
+#. URI of the theme
+msgid "http://radiustheme.com/demo/wordpress/blogxer"
+msgstr ""
+
+#: inc/general.php:66
+msgid "Huge"
+msgstr ""
+
+#: inc/redux-config.php:746
+msgid "Image"
+msgstr ""
+
+#: inc/redux-config.php:737
+msgid "Image Link"
+msgstr ""
+
+#: inc/redux-config.php:194
+msgid "In case you want to hide any field, keep that field empty"
+msgstr ""
+
+#: template-parts/header/icon-menu.php:24
+msgid "Info"
+msgstr ""
+
+#: inc/helper-functions.php:172 inc/redux-config.php:267
+msgid "Instagram"
+msgstr ""
+
+#: inc/sidebar-generator.php:72 inc/sidebar-generator.php:119
+msgid "Invalid nonce"
+msgstr ""
+
+#: template-parts/content-none.php:18
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/header/product-search-form.php:6
+msgid "Keyword here..."
+msgstr ""
+
+#: inc/general.php:61
+msgid "Large"
+msgstr ""
+
+#: inc/redux-config.php:1615
+msgid "Last Modified Posts"
+msgstr ""
+
+#: inc/redux-config.php:1148
+msgid "Layout"
+msgstr ""
+
+#: inc/redux-config.php:402 inc/redux-config.php:423 inc/redux-config.php:863
+#: inc/redux-config.php:1347 inc/redux-config.php:1448
+msgid "Layout 1"
+msgstr ""
+
+#: inc/redux-config.php:406 inc/redux-config.php:427 inc/redux-config.php:867
+#: inc/redux-config.php:1351 inc/redux-config.php:1452
+msgid "Layout 2"
+msgstr ""
+
+#: inc/redux-config.php:410 inc/redux-config.php:431 inc/redux-config.php:871
+#: inc/redux-config.php:1355 inc/redux-config.php:1456
+msgid "Layout 3"
+msgstr ""
+
+#: inc/redux-config.php:435 inc/redux-config.php:875 inc/redux-config.php:1359
+msgid "Layout 4"
+msgstr ""
+
+#: inc/redux-config.php:439 inc/redux-config.php:879
+msgid "Layout 5"
+msgstr ""
+
+#: inc/redux-config.php:443
+msgid "Layout 6"
+msgstr ""
+
+#: inc/redux-config.php:447
+msgid "Layout 7"
+msgstr ""
+
+#: inc/redux-config.php:451
+msgid "Layout 8"
+msgstr ""
+
+#: inc/redux-config.php:1244
+msgid "Layout Defaults"
+msgstr ""
+
+#: inc/redux-config.php:1660
+msgid "Left"
+msgstr ""
+
+#: inc/redux-config.php:1150
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/general.php:34
+msgid "light grayish magenta"
+msgstr ""
+
+#: inc/redux-config.php:303
+msgid "Light Logo"
+msgstr ""
+
+#: inc/redux-config.php:753
+msgid "Link"
+msgstr ""
+
+#: inc/general.php:294
+msgid "LinkedIn"
+msgstr ""
+
+#: inc/helper-functions.php:137 inc/redux-config.php:237
+msgid "Linkedin"
+msgstr ""
+
+#: inc/redux-config.php:312
+msgid "Logo Area Width"
+msgstr ""
+
+#: inc/redux-config.php:298 inc/redux-config.php:972
+msgid "Logo height less than 90px is recommended"
+msgstr ""
+
+#: inc/redux-config.php:294
+msgid "Main Logo"
+msgstr ""
+
+#: inc/redux-config.php:487
+msgid "Main Menu"
+msgstr ""
+
+#: inc/redux-config.php:495
+msgid "Main Menu Items"
+msgstr ""
+
+#: inc/redux-config.php:773
+msgid "Make Link Nofollow"
+msgstr ""
+
+#: inc/redux-config.php:527
+msgid "Menu Background Color"
+msgstr ""
+
+#: inc/redux-config.php:520
+msgid "Menu Color"
+msgstr ""
+
+#: inc/redux-config.php:501
+msgid "Menu Font"
+msgstr ""
+
+#: inc/redux-config.php:547
+msgid "Menu Hover Color"
+msgstr ""
+
+#: inc/scripts.php:136
+msgid "Minute"
+msgstr ""
+
+#: inc/redux-config.php:605
+msgid "Mobile Menu"
+msgstr ""
+
+#: inc/redux-config.php:621
+msgid "Mobile Menu Font"
+msgstr ""
+
+#: inc/redux-config.php:1502 inc/redux-config.php:1505
+msgid "Modern"
+msgstr ""
+
+#: inc/redux-config.php:1616
+msgid "Most Commented posts"
+msgstr ""
+
+#: inc/redux-config.php:1617
+msgid "Most Viewed posts"
+msgstr ""
+
+#: woocommerce/single-product/meta.php:31
+msgid "N/A"
+msgstr ""
+
+#: comments.php:58 inc/sidebar-generator.php:38
+msgid "Name"
+msgstr ""
+
+#: inc/woo-functions.php:145
+msgid "Name *"
+msgstr ""
+
+#: inc/general.php:330
+msgid "New"
+msgstr ""
+
+#: comments.php:40
+msgid "Newer Comments"
+msgstr ""
+
+#: inc/general.php:566
+msgid "Next article"
+msgstr ""
+
+#: inc/redux-config.php:769
+msgid "Nofollow"
+msgstr ""
+
+#: inc/redux-config.php:1506
+msgid "None"
+msgstr ""
+
+#: inc/general.php:56
+msgid "Normal"
+msgstr ""
+
+#: inc/woo-functions.php:158
+msgid "Not that bad"
+msgstr ""
+
+#: template-parts/content-none.php:10
+msgid "Nothing Found"
+msgstr ""
+
+#: inc/redux-config.php:902 inc/redux-config.php:915
+msgid "Number of Columns for Footer 2"
+msgstr ""
+
+#: inc/redux-config.php:1857
+msgid "Number of Products Per Page"
+msgstr ""
+
+#: inc/redux-config.php:1381 inc/redux-config.php:1389
+#: inc/redux-config.php:1397 inc/redux-config.php:1405
+#: inc/redux-config.php:1413 inc/redux-config.php:1421
+#: inc/redux-config.php:1472 inc/redux-config.php:1480
+#: inc/redux-config.php:1488 inc/redux-config.php:1496
+#: inc/redux-config.php:1515 inc/redux-config.php:1523
+#: inc/redux-config.php:1531 inc/redux-config.php:1539
+#: inc/redux-config.php:1547 inc/redux-config.php:1555
+#: inc/redux-config.php:1563 inc/redux-config.php:1572
+#: inc/redux-config.php:1586 inc/redux-config.php:1638
+#: inc/redux-config.php:1688 inc/redux-config.php:1696
+#: inc/redux-config.php:1704 inc/redux-config.php:1712
+#: inc/redux-config.php:1720 inc/redux-config.php:1728
+#: inc/redux-config.php:1736 inc/redux-config.php:1744
+#: inc/redux-config.php:1752 inc/redux-config.php:1760
+#: inc/redux-config.php:1768
+msgid "Off"
+msgstr ""
+
+#: comments.php:39
+msgid "Older Comments"
+msgstr ""
+
+#: inc/redux-config.php:1380 inc/redux-config.php:1388
+#: inc/redux-config.php:1396 inc/redux-config.php:1404
+#: inc/redux-config.php:1412 inc/redux-config.php:1420
+#: inc/redux-config.php:1471 inc/redux-config.php:1479
+#: inc/redux-config.php:1487 inc/redux-config.php:1495
+#: inc/redux-config.php:1514 inc/redux-config.php:1522
+#: inc/redux-config.php:1530 inc/redux-config.php:1538
+#: inc/redux-config.php:1546 inc/redux-config.php:1554
+#: inc/redux-config.php:1562 inc/redux-config.php:1571
+#: inc/redux-config.php:1585 inc/redux-config.php:1637
+#: inc/redux-config.php:1687 inc/redux-config.php:1695
+#: inc/redux-config.php:1703 inc/redux-config.php:1711
+#: inc/redux-config.php:1719 inc/redux-config.php:1727
+#: inc/redux-config.php:1735 inc/redux-config.php:1743
+#: inc/redux-config.php:1751 inc/redux-config.php:1759
+#: inc/redux-config.php:1767
+msgid "On"
+msgstr ""
+
+#: inc/redux-config.php:1802
+msgid "Oops! That page can’t be found."
+msgstr ""
+
+#: inc/redux-config.php:760
+msgid "Open Link in New Tab"
+msgstr ""
+
+#: inc/sidebar-generator.php:172 inc/sidebar-generator.php:211
+msgid "Operation failed"
+msgstr ""
+
+#: template-parts/content-banner.php:38
+msgid "Our News"
+msgstr ""
+
+#: inc/redux-config.php:1648
+msgid "Over Image"
+msgstr ""
+
+#: inc/redux-config.php:824 inc/redux-config.php:1253
+msgid "Page"
+msgstr ""
+
+#: inc/redux-config.php:1780
+msgid "Page Title"
+msgstr ""
+
+#: inc/redux-config.php:1235
+msgid "Page/Post Background Color"
+msgstr ""
+
+#: inc/redux-config.php:1227
+msgid "Page/Post Background Image"
+msgstr ""
+
+#: template-parts/content-page.php:24 template-parts/content-single-2.php:89
+#: template-parts/content-single-3.php:91 template-parts/content-single.php:118
+msgid "Pages:"
+msgstr ""
+
+#: inc/woo-functions.php:155
+msgid "Perfect"
+msgstr ""
+
+#: inc/redux-config.php:200
+msgid "Phone"
+msgstr ""
+
+#: inc/general.php:302 inc/helper-functions.php:167 inc/redux-config.php:261
+msgid "Pinterest"
+msgstr ""
+
+#: inc/redux-config.php:1630 inc/redux-config.php:1644
+msgid "Place of the Caption"
+msgstr ""
+
+#: inc/general.php:278
+msgid "Please enter your Author Designation"
+msgstr ""
+
+#: inc/general.php:287
+msgid "Please enter your facebook URL."
+msgstr ""
+
+#: inc/general.php:299
+msgid "Please enter your google+ Profile"
+msgstr ""
+
+#: inc/general.php:295
+msgid "Please enter your LinkedIn Profile"
+msgstr ""
+
+#: inc/general.php:303
+msgid "Please enter your Pinterest Profile"
+msgstr ""
+
+#: inc/general.php:291
+msgid "Please enter your Twitter username."
+msgstr ""
+
+#: inc/redux-config.php:146
+msgid ""
+"Please upload your choice of preloader image. Transparent GIF format is "
+"recommended"
+msgstr ""
+
+#: inc/redux-config.php:1373
+msgid "Post Content Limit"
+msgstr ""
+
+#: inc/redux-config.php:1599
+msgid "Post Query"
+msgstr ""
+
+#: inc/redux-config.php:1570
+msgid "Post Reading Length Active"
+msgstr ""
+
+#: inc/redux-config.php:1430
+msgid "Post Settings"
+msgstr ""
+
+#: inc/redux-config.php:1672
+msgid "Post Sharing Option"
+msgstr ""
+
+#: inc/redux-config.php:1271
+msgid "Post Single"
+msgstr ""
+
+#: inc/redux-config.php:1603
+msgid "Posts by the same Author"
+msgstr ""
+
+#: inc/redux-config.php:1601
+msgid "Posts in the same Categories"
+msgstr ""
+
+#: inc/redux-config.php:1602
+msgid "Posts in the same Tags"
+msgstr ""
+
+#: inc/redux-config.php:137
+msgid "Preloader"
+msgstr ""
+
+#: inc/redux-config.php:145
+msgid "Preloader Image"
+msgstr ""
+
+#: inc/general.php:559
+msgid "Previous article"
+msgstr ""
+
+#: inc/general.php:95
+msgid "Primary"
+msgstr ""
+
+#: inc/redux-config.php:110
+msgid "Primary Color"
+msgstr ""
+
+#: inc/redux-config.php:1871
+msgid "Product Add to Wishlist Icon"
+msgstr ""
+
+#: inc/redux-config.php:1863
+msgid "Product Hover Effect"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:34
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr ""
+
+#: inc/redux-config.php:1880
+msgid "Product Quickview Icon"
+msgstr ""
+
+#: inc/redux-config.php:1326
+msgid "Product Single"
+msgstr ""
+
+#: inc/redux-config.php:1889
+msgid "Product Single Page"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:32
+msgid "Quantity"
+msgstr ""
+
+#: inc/redux-config.php:1598
+msgid "Query Type"
+msgstr ""
+
+#. Author of the theme
+msgid "RadiusTheme"
+msgstr ""
+
+#: inc/redux-config.php:1614
+msgid "Random Posts"
+msgstr ""
+
+#: inc/woo-functions.php:154
+msgid "Rate&hellip;"
+msgstr ""
+
+#: template-parts/content-1.php:87 template-parts/content-2.php:80
+#: template-parts/content-3.php:64 template-parts/content-4.php:69
+#: template-parts/content-4.php:126 template-parts/content-search.php:64
+msgid "READ MORE"
+msgstr ""
+
+#: template-parts/content-none.php:13
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>"
+msgstr ""
+
+#: inc/redux-config.php:1613
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/redux-config.php:612
+msgid "Recommended value is: 992"
+msgstr ""
+
+#: inc/redux-config.php:1578
+msgid "Related Post Settings"
+msgstr ""
+
+#: inc/redux-config.php:1919 woocommerce/single-product/related.php:24
+msgid "Related Products"
+msgstr ""
+
+#: comments.php:29
+msgid "Reply"
+msgstr ""
+
+#: inc/redux-config.php:1935
+msgid "Reviews Tab"
+msgstr ""
+
+#: inc/redux-config.php:1659
+msgid "Right"
+msgstr ""
+
+#: inc/redux-config.php:1152
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/redux-config.php:279
+msgid "RSS"
+msgstr ""
+
+#: inc/redux-config.php:611
+msgid "Screen width in which mobile menu activated"
+msgstr ""
+
+#: template-parts/header/icon-search.php:10
+msgid "Search"
+msgstr ""
+
+#: inc/redux-config.php:1284
+msgid "Search Excerpt Length"
+msgstr ""
+
+#: inc/redux-config.php:460
+msgid "Search Icon"
+msgstr ""
+
+#: inc/redux-config.php:1291
+msgid "Search Layout"
+msgstr ""
+
+#: template-parts/content-banner.php:13
+msgid "Search Results for : "
+msgstr ""
+
+#: searchform.php:12
+msgid "Search Your Blogxer . . ."
+msgstr ""
+
+#: inc/scripts.php:137
+msgid "Second"
+msgstr ""
+
+#: inc/redux-config.php:118
+msgid "Secondary Color"
+msgstr ""
+
+#: inc/woo-functions.php:192
+msgid "Share This:"
+msgstr ""
+
+#: inc/redux-config.php:1317
+msgid "Shop Archive"
+msgstr ""
+
+#: inc/redux-config.php:1904 inc/redux-config.php:1912
+#: inc/redux-config.php:1920 inc/redux-config.php:1928
+#: inc/redux-config.php:1936 inc/redux-config.php:1944
+#: inc/redux-config.php:1958
+msgid "Show"
+msgstr ""
+
+#: inc/redux-config.php:1553
+msgid "Show Author Bio"
+msgstr ""
+
+#: inc/redux-config.php:1387 inc/redux-config.php:1478
+msgid "Show Author Name"
+msgstr ""
+
+#: inc/redux-config.php:1486
+msgid "Show Author Social Links"
+msgstr ""
+
+#: inc/redux-config.php:1636
+msgid "Show caption"
+msgstr ""
+
+#: inc/redux-config.php:1403 inc/redux-config.php:1521
+msgid "Show Categories"
+msgstr ""
+
+#: inc/redux-config.php:1395 inc/redux-config.php:1513
+msgid "Show Comment Number"
+msgstr ""
+
+#: inc/redux-config.php:1379
+msgid "Show Date"
+msgstr ""
+
+#: inc/redux-config.php:1758
+msgid "Show Email Share Button"
+msgstr ""
+
+#: inc/redux-config.php:1895
+msgid "Show excerpt when short description doesn't exist"
+msgstr ""
+
+#: inc/redux-config.php:1686
+msgid "Show Facebook Share Button"
+msgstr ""
+
+#: inc/redux-config.php:1470
+msgid "Show Featured Image"
+msgstr ""
+
+#: inc/redux-config.php:1702
+msgid "Show Google Share Button"
+msgstr ""
+
+#: inc/redux-config.php:329
+msgid "Show header when scroll down"
+msgstr ""
+
+#: inc/redux-config.php:1710
+msgid "Show Linkedin Share Button"
+msgstr ""
+
+#: inc/redux-config.php:1545
+msgid "Show Next Post / Previous post"
+msgstr ""
+
+#: inc/redux-config.php:1564
+msgid "Show or hide post views count number"
+msgstr ""
+
+#: inc/redux-config.php:1742
+msgid "Show Pinterest Share Button"
+msgstr ""
+
+#: inc/redux-config.php:1494
+msgid "Show Post Date"
+msgstr ""
+
+#: inc/redux-config.php:1766
+msgid "Show Print Share Button"
+msgstr ""
+
+#: inc/redux-config.php:1419
+msgid "Show Reading Length Active"
+msgstr ""
+
+#: inc/redux-config.php:1750
+msgid "Show Reddit Share Button"
+msgstr ""
+
+#: inc/redux-config.php:1592
+msgid "Show Related Post Number"
+msgstr ""
+
+#: inc/redux-config.php:1624
+msgid "Show Related Post Title Length"
+msgstr ""
+
+#: inc/redux-config.php:1584
+msgid "Show Related product"
+msgstr ""
+
+#: inc/redux-config.php:1537
+msgid "Show Share"
+msgstr ""
+
+#: inc/redux-config.php:1726
+msgid "Show Stumbleupon Share Button"
+msgstr ""
+
+#: inc/redux-config.php:1529
+msgid "Show Tags"
+msgstr ""
+
+#: inc/redux-config.php:1734
+msgid "Show Tumblr Share Button"
+msgstr ""
+
+#: inc/redux-config.php:1694
+msgid "Show Twitter Share Button"
+msgstr ""
+
+#: inc/redux-config.php:1411
+msgid "Show Views"
+msgstr ""
+
+#: inc/redux-config.php:1718
+msgid "Show Whatsapp Share Button"
+msgstr ""
+
+#: inc/redux-config.php:670
+msgid "Show/Hide Breadcrumb in mobile"
+msgstr ""
+
+#: inc/redux-config.php:1561
+msgid "Show/hide Post View"
+msgstr ""
+
+#: inc/general.php:139 inc/helper-functions.php:341
+msgid "Sidebar"
+msgstr ""
+
+#: inc/sidebar-generator.php:113
+msgid "Sidebar ID not found"
+msgstr ""
+
+#: inc/sidebar-generator.php:66
+msgid "Sidebar name can\\'t be empty"
+msgstr ""
+
+#: inc/sidebar-generator.php:79
+msgid ""
+"Sidebar with the same name already exists. Please choose a different name"
+msgstr ""
+
+#: inc/redux-config.php:1503
+msgid "Simple Date format"
+msgstr ""
+
+#: inc/redux-config.php:806
+msgid "Single Post"
+msgstr ""
+
+#: inc/redux-config.php:1464
+msgid "single Post info Settings"
+msgstr ""
+
+#: inc/redux-config.php:1444
+msgid "Single Post Layout"
+msgstr ""
+
+#: inc/redux-config.php:1438
+msgid "Single Post/news Layout Style"
+msgstr ""
+
+#: inc/redux-config.php:1680
+msgid "Single Post/news Sharing Option"
+msgstr ""
+
+#: header.php:37
+msgid "Skip to content"
+msgstr ""
+
+#: wc-template-parts/content-product-sku.php:11
+#: woocommerce/single-product/meta.php:31
+msgid "SKU:"
+msgstr ""
+
+#: inc/helper-functions.php:157 inc/redux-config.php:273
+msgid "Skype"
+msgstr ""
+
+#: inc/general.php:51
+msgid "Small"
+msgstr ""
+
+#: inc/general.php:282
+msgid "Social profile information"
+msgstr ""
+
+#: template-parts/content-none.php:15
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: inc/redux-config.php:1610
+msgid "Sort Order"
+msgstr ""
+
+#: inc/helper-functions.php:182
+msgid "Stackoverflow"
+msgstr ""
+
+#: inc/redux-config.php:325
+msgid "Sticky Header"
+msgstr ""
+
+#: inc/general.php:29
+msgid "strong magenta"
+msgstr ""
+
+#: inc/redux-config.php:553
+msgid "Sub Menu Items"
+msgstr ""
+
+#: inc/redux-config.php:585
+msgid "Submenu Background Color"
+msgstr ""
+
+#: inc/redux-config.php:578
+msgid "Submenu Color"
+msgstr ""
+
+#: inc/redux-config.php:559
+msgid "Submenu Font"
+msgstr ""
+
+#: inc/redux-config.php:599
+msgid "Submenu Hover Background Color"
+msgstr ""
+
+#: inc/redux-config.php:592
+msgid "Submenu Hover Color"
+msgstr ""
+
+#: inc/redux-config.php:781
+msgid "Supports: Shortcode, Adsense, Text, HTML, Scripts"
+msgstr ""
+
+#: inc/woo-functions.php:179 woocommerce/single-product/meta.php:37
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/redux-config.php:1911
+msgid "Tags"
+msgstr ""
+
+#: inc/redux-config.php:1808
+msgid ""
+"The page you are looking is not available or has been removed. Try going to "
+"Home Page by using the button below."
+msgstr ""
+
+#: inc/redux-config.php:111
+msgid "Theme Default: #444444"
+msgstr ""
+
+#: inc/redux-config.php:119
+msgid "Theme Default: #646464"
+msgstr ""
+
+#: inc/redux-config.php:180
+msgid ""
+"This image will be used as preview image in some archive pages if no "
+"featured image exists"
+msgstr ""
+
+#: inc/redux-config.php:352
+msgid "Top Bar"
+msgstr ""
+
+#: inc/general.php:159
+msgid "Top Bar 4 - Left"
+msgstr ""
+
+#: inc/general.php:168
+msgid "Top Bar 4 - Right"
+msgstr ""
+
+#: inc/redux-config.php:392
+msgid "Top Bar Background Color"
+msgstr ""
+
+#: inc/redux-config.php:369
+msgid "Top Bar Icon Color"
+msgstr ""
+
+#: inc/redux-config.php:398
+msgid "Top Bar Layout"
+msgstr ""
+
+#: inc/redux-config.php:362
+msgid "Top Bar Text Color"
+msgstr ""
+
+#: inc/redux-config.php:334
+msgid "Transparent Header"
+msgstr ""
+
+#: inc/redux-config.php:539
+msgid "Transparent Menu Color"
+msgstr ""
+
+#: inc/redux-config.php:384
+msgid "Transparent Top Bar Icon Color"
+msgstr ""
+
+#: inc/redux-config.php:376
+msgid "Transparent Top Bar Text Color"
+msgstr ""
+
+#: inc/general.php:290 inc/helper-functions.php:132 inc/redux-config.php:225
+msgid "Twitter"
+msgstr ""
+
+#: inc/redux-config.php:1016
+msgid "Typography"
+msgstr ""
+
+#: inc/redux-config.php:1647
+msgid "Under Image"
+msgstr ""
+
+#: inc/redux-config.php:307
+msgid ""
+"Used when Transparent Header is enabled. Logo height less than 90px is "
+"recommended"
+msgstr ""
+
+#: inc/general.php:273
+msgid "User Designation"
+msgstr ""
+
+#: inc/redux-config.php:476
+msgid "Vertical Menu Icon"
+msgstr ""
+
+#: inc/general.php:44
+msgid "very dark gray"
+msgstr ""
+
+#: inc/general.php:39
+msgid "very light gray"
+msgstr ""
+
+#: inc/woo-functions.php:159
+msgid "Very Poor"
+msgstr ""
+
+#: inc/redux-config.php:313
+msgid ""
+"Width is defined by the number of bootstrap columns. Please note, navigation "
+"menu width will be decreased with the increase of logo width"
+msgstr ""
+
+#: inc/redux-config.php:1843
+msgid "WooCommerce"
+msgstr ""
+
+#: inc/redux-config.php:347 inc/redux-config.php:356 inc/redux-config.php:414
+#: inc/redux-config.php:455 inc/redux-config.php:883
+msgid "You can override this settings in individual pages"
+msgstr ""
+
+#: inc/redux-config.php:338
+msgid ""
+"You have to enable Banner or Slider in page to make it work properly. You "
+"can override this settings in individual pages"
+msgstr ""
+
+#: inc/modules/rt-post-related.php:145
+msgid "YOU MAY ALSO LIKE"
+msgstr ""
+
+#: woocommerce/single-product/up-sells.php:24
+msgid "You may also like&hellip;"
+msgstr ""
+
+#: woocommerce/cart/cross-sells.php:24
+msgid "You may be interested in&hellip;"
+msgstr ""
+
+#: inc/views/comments-callback.php:31
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/woo-functions.php:152
+msgid "Your Rating"
+msgstr ""
+
+#: inc/woo-functions.php:163
+msgid "Your Review *"
+msgstr ""
+
+#: inc/helper-functions.php:162 inc/redux-config.php:255
+msgid "Youtube"
+msgstr ""

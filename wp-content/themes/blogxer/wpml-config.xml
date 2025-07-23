@@ -1,0 +1,14 @@
+<wpml-config>
+    <admin-texts>
+        <key name="blogxer">
+            <key name="phone" />
+            <key name="email" />
+            <key name="address" />
+            <key name="copyright_text" />
+            <key name="error_title" />
+            <key name="error_text1" />
+            <key name="error_text2" />
+            <key name="error_buttontext" />
+        </key>
+    </admin-texts>
+</wpml-config>

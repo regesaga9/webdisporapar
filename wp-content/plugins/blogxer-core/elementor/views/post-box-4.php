@@ -1,0 +1,513 @@
+<?php
+/**
+ * @author  RadiusTheme
+ * @since   1.0
+ * @version 1.0
+ */
+
+namespace radiustheme\Blogxer_Core;
+
+use BlogxerTheme;
+use BlogxerTheme_Helper;
+use \WP_Query;
+
+$blogxer_has_entry_meta  = ( BlogxerTheme::$options['blog_author_name'] || BlogxerTheme::$options['blog_comment_num'] || BlogxerTheme::$options['blog_cats'] ) ? true : false;
+
+$thumb_size1 = 'blogxer-size5';
+$thumb_size2 = 'blogxer-size6';
+
+/*New*/
+$post_sorting = $data['post_sorting'];
+$post_ordering = $data['post_ordering'];
+$title_limit = $data['post_title_length'];
+$content_limit = $data['post_excerpt_length'];
+$i = 1;
+?>
+<div class="post-box-default post-box-<?php echo esc_attr( $data['style'] ); ?> <?php echo esc_attr( $data['content_align'] ); ?> <?php if ( empty( $data['meta_icon_display'] ) || ($data['meta_icon_display'] == 'no') ) { ?>no-icon<?php } ?>">
+	<div class="row auto-clear gutters-6">
+	<?php
+	if ( $data['cat_num'] == 'multi' ) {
+		// build up the array
+		foreach ( $data['category_list'] as $cat ) { $cats[] = array( 'cat_multi_grid' => $cat['cat_multi_grid'] ); }
+		if ( !empty( $cats ) ) {
+		//category
+		$category_number = count( $cats );
+			foreach ( $cats as $cat ) {
+			if ( $cat['cat_multi_grid'] != 0 ) {
+			
+			$args = array(
+				'cat' => $cat['cat_multi_grid'],
+				'order' => $post_ordering,
+				'posts_per_page' => 1,
+			);
+				
+			if ( $post_sorting == 'view' ) {
+				$args['orderby']  = 'meta_value_num';
+				$args['meta_key'] = 'blogxer_views';
+			} else {
+				$args['orderby'] = $post_sorting;
+			}
+			$query = new WP_Query( $args );
+			
+			$temp = BlogxerTheme_Helper::wp_set_temp_query( $query );
+
+			if ( $query->have_posts() ) {
+				while ( $query->have_posts() ) {
+				$query->the_post();
+				$content = wp_trim_words(get_the_excerpt(), $content_limit, '');
+				$title = wp_trim_words( get_the_title(), $title_limit, '' );
+				$blogxer_comments_number = number_format_i18n( get_comments_number() );
+				$blogxer_comments_html = $blogxer_comments_number == 1 ? esc_html__( 'Comment' , 'blogxer-core' ) : esc_html__( 'Comments' , 'blogxer-core' );
+				$blogxer_comments_html = $blogxer_comments_number . ' ' . $blogxer_comments_html;
+				if ( !empty( $data['post_date_format'] ) ) {
+					if ( $data['post_date_format'] == 'global' ){
+						$formatted_post_date = get_the_date(); 
+					} else {
+						$formatted_post_date = get_the_date( 'M d, Y' );
+					}
+				}
+?>
+		<?php if ( $i == 1 ) { ?>
+		<div class="col-lg-6 col-md-12 col-sm-12 col-12">
+			<div class="rtin-single-post">
+				<div class="rtin-img">
+				<a href="<?php the_permalink(); ?>">
+					<?php
+						if ( has_post_thumbnail() ){
+							the_post_thumbnail( $thumb_size1 );
+						}
+						else {
+							if ( !empty( BlogxerTheme::$options['no_preview_image']['id'] ) ) {
+								echo wp_get_attachment_image( BlogxerTheme::$options['no_preview_image']['id'], $thumb_size1 );
+							}
+							else {
+								echo '<img class="wp-post-image" src="' . BlogxerTheme_Helper::get_img( 'noimage_450X330.jpg' ) . '" alt="'.get_the_title().'">';
+							}
+						}
+					?>
+				</a>
+				<?php if ( get_post_format( get_the_ID() ) == 'video' ) { ?>
+				<div class="post-video-icon">
+					<a href="<?php the_permalink(); ?>" class="video-play"><i class="fa fa-play"></i></a>
+				</div>
+				<?php } ?>
+				</div>
+				<div class="rtin-content">
+					<?php if ( $blogxer_has_entry_meta ) { ?>
+					<div class="post-meta">
+						<ul>
+							<?php if ( $data['author_display']  == 'yes' ) { ?>
+							<li><i class="fa fa-user" aria-hidden="true"></i><?php the_author_posts_link(); ?></li>
+							<?php } if ( $data['date_display']  == 'yes' ) { ?>
+							<li><i class="fa fa-calendar-o" aria-hidden="true"></i><?php echo get_the_date(); ?></li>
+							<?php } if ( $data['cat_display']  == 'yes' ) { ?>		
+							<li class="blog-cat"><i class="fa fa-tag" aria-hidden="true"></i><?php echo the_category( ', ' );?></li>
+							<?php } if ( $data['read_time_display']  == 'yes' ) { ?>
+							<li class="meta-reading-time meta-item"> <?php echo blogxer_reading_time(); ?></li>
+							<?php } ?>
+						</ul>
+					</div>
+					<?php } ?>
+					<h3 class="rtin-title"><a href="<?php the_permalink();?>"><?php echo esc_html( $title );?></a></h3><?php if ( $data['content_display']  == 'yes' ) { ?><?php echo wp_kses_post( $content );?><?php } ?>
+					<?php if ( ( $data['button_display']  == 'yes' ) || ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+					<div class="post-footer">
+						<?php if ( $data['button_display']  == 'yes' ) { ?>
+							<a class="item-btn" href="<?php the_permalink(); ?>"><span><?php esc_html_e( 'READ MORE', 'blogxer-core' ); ?></span><?php if ( is_rtl() ) { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } else { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } ?></a>
+						<?php } ?>
+						<?php if ( ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+						<div class="post-meta">
+							<ul>
+								<?php if ( $data['view_display']  == 'yes' ) { ?>
+								<li><span class="meta-views meta-item "><?php echo blogxer_views(); ?></span></li>
+								<?php } if ( $data['comment_display']  == 'yes' ) { ?>
+								<li><i class="fa fa-comment-o" aria-hidden="true"></i><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo esc_html( $blogxer_comments_html );?></a></li>
+								<?php } ?>
+							</ul>
+						</div>
+						<?php } ?>
+					</div>
+					<?php } ?>
+				</div>
+			</div>
+		</div>		
+		<?php } ?>
+		<?php if ( $i > 1 && $i < 4 && $i != 3 ) { ?>
+		<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+		<?php } ?>
+		<?php if ( $i == 2 || $i == 3 ) { ?>
+		<div class="rtin-single-post">
+			<div class="rtin-img">
+			<a href="<?php the_permalink(); ?>">
+				<?php
+					if ( has_post_thumbnail() ){
+						the_post_thumbnail( $thumb_size1 );
+					}
+					else {
+						if ( !empty( BlogxerTheme::$options['no_preview_image']['id'] ) ) {
+							echo wp_get_attachment_image( BlogxerTheme::$options['no_preview_image']['id'], $thumb_size1 );
+						}
+						else {
+							echo '<img class="wp-post-image" src="' . BlogxerTheme_Helper::get_img( 'noimage_450X330.jpg' ) . '" alt="'.get_the_title().'">';
+						}
+					}
+				?>
+			</a>
+			<?php if ( get_post_format( get_the_ID() ) == 'video' ) { ?>
+			<div class="post-video-icon">
+				<a href="<?php the_permalink(); ?>" class="video-play"><i class="fa fa-play"></i></a>
+			</div>
+			<?php } ?>
+			</div>
+			<div class="rtin-content small-content">
+				<?php if ( $blogxer_has_entry_meta ) { ?>
+				<div class="post-meta">
+					<ul>
+						<?php if ( $data['author_display']  == 'yes' ) { ?>
+						<li><i class="fa fa-user" aria-hidden="true"></i><?php the_author_posts_link(); ?></li>
+						<?php } if ( $data['date_display']  == 'yes' ) { ?>
+						<li><i class="fa fa-calendar-o" aria-hidden="true"></i><?php echo get_the_date(); ?></li>
+						<?php } if ( $data['cat_display']  == 'yes' ) { ?>		
+						<li class="blog-cat"><i class="fa fa-tag" aria-hidden="true"></i><?php echo the_category( ', ' );?></li>
+						<?php } if ( $data['read_time_display']  == 'yes' ) { ?>
+						<li class="meta-reading-time meta-item"> <?php echo blogxer_reading_time(); ?></li>
+						<?php } ?>
+					</ul>
+				</div>
+				<?php } ?>
+				<h3 class="rtin-title"><a href="<?php the_permalink();?>"><?php echo esc_html( $title );?></a></h3><?php if ( $data['content_display']  == 'yes' ) { ?><?php echo wp_kses_post( $content );?><?php } ?>
+				<?php if ( ( $data['button_display']  == 'yes' ) || ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+				<div class="post-footer">
+					<?php if ( $data['button_display']  == 'yes' ) { ?>
+						<a class="item-btn" href="<?php the_permalink(); ?>"><span><?php esc_html_e( 'READ MORE', 'blogxer-core' ); ?></span><?php if ( is_rtl() ) { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } else { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } ?></a>
+					<?php } ?>
+					<?php if ( ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+					<div class="post-meta">
+						<ul>
+							<?php if ( $data['view_display']  == 'yes' ) { ?>
+							<li><span class="meta-views meta-item "><?php echo blogxer_views(); ?></span></li>
+							<?php } if ( $data['comment_display']  == 'yes' ) { ?>
+							<li><i class="fa fa-comment-o" aria-hidden="true"></i><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo esc_html( $blogxer_comments_html );?></a></li>
+							<?php } ?>
+						</ul>
+					</div>
+					<?php } ?>
+				</div>
+				<?php } ?>
+			</div>
+		</div>
+		<?php } ?>
+		<?php if ( $i == 4 ) { ?>
+		</div>
+		<?php } ?>
+		<?php if ( $i == 4 ) { ?>
+		<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+			<div class="rtin-single-post">
+				<div class="rtin-img">
+				<a href="<?php the_permalink(); ?>">
+					<?php
+						if ( has_post_thumbnail() ){
+							the_post_thumbnail( $thumb_size2 );
+						}
+						else {
+							if ( !empty( BlogxerTheme::$options['no_preview_image']['id'] ) ) {
+								echo wp_get_attachment_image( BlogxerTheme::$options['no_preview_image']['id'], $thumb_size2 );
+							}
+							else {
+								echo '<img class="wp-post-image" src="' . BlogxerTheme_Helper::get_img( 'noimage_425X710.jpg' ) . '" alt="'.get_the_title().'">';
+							}
+						}
+					?>
+				</a>
+				<?php if ( get_post_format( get_the_ID() ) == 'video' ) { ?>
+				<div class="post-video-icon">
+					<a href="<?php the_permalink(); ?>" class="video-play"><i class="fa fa-play"></i></a>
+				</div>
+				<?php } ?>
+				</div>
+				<div class="rtin-content small-content">
+					<?php if ( $blogxer_has_entry_meta ) { ?>
+					<div class="post-meta">
+						<ul>
+							<?php if ( $data['author_display']  == 'yes' ) { ?>
+							<li><i class="fa fa-user" aria-hidden="true"></i><?php the_author_posts_link(); ?></li>
+							<?php } if ( $data['date_display']  == 'yes' ) { ?>
+							<li><i class="fa fa-calendar-o" aria-hidden="true"></i><?php echo get_the_date(); ?></li>
+							<?php } if ( $data['cat_display']  == 'yes' ) { ?>		
+							<li class="blog-cat"><i class="fa fa-tag" aria-hidden="true"></i><?php echo the_category( ', ' );?></li>
+							<?php } if ( $data['read_time_display']  == 'yes' ) { ?>
+							<li class="meta-reading-time meta-item"> <?php echo blogxer_reading_time(); ?></li>
+							<?php } ?>
+						</ul>
+					</div>
+					<?php } ?>
+					<h3 class="rtin-title"><a href="<?php the_permalink();?>"><?php echo esc_html( $title );?></a></h3><?php if ( $data['content_display']  == 'yes' ) { ?><?php echo wp_kses_post( $content );?><?php } ?>
+					<?php if ( ( $data['button_display']  == 'yes' ) || ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+					<div class="post-footer">
+						<?php if ( $data['button_display']  == 'yes' ) { ?>
+							<a class="item-btn" href="<?php the_permalink(); ?>"><span><?php esc_html_e( 'READ MORE', 'blogxer-core' ); ?></span><?php if ( is_rtl() ) { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } else { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } ?></a>
+						<?php } ?>
+						<?php if ( ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+						<div class="post-meta">
+							<ul>
+								<?php if ( $data['view_display']  == 'yes' ) { ?>
+								<li><span class="meta-views meta-item "><?php echo blogxer_views(); ?></span></li>
+								<?php } if ( $data['comment_display']  == 'yes' ) { ?>
+								<li><i class="fa fa-comment-o" aria-hidden="true"></i><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo esc_html( $blogxer_comments_html );?></a></li>
+								<?php } ?>
+							</ul>
+						</div>
+						<?php } ?>
+					</div>
+					<?php } ?>
+				</div>
+			</div>
+		</div>
+		<?php } ?>
+		<?php } ?>
+		<?php } else { ?>
+		<div class="col-lg-12 col-sm-12 col-12"><?php esc_html_e( 'No Post/News Found', 'blogxer-core' ); ?></div>
+		<?php } BlogxerTheme_Helper::wp_reset_temp_query( $temp ); 
+		} $i++; } } ?>
+		<?php
+		} else {	
+			//number
+			$number_of_post = 4;
+			$cat_single_grid = $data['cat_single_grid'];
+			$y = 1;
+			$args = array(
+				'cat' => $cat_single_grid,
+				'post_status' => 'publish',
+				'order' => $post_ordering,
+				'posts_per_page' => $number_of_post,
+			);
+				
+			if ( $post_sorting == 'view' ) {
+				$args['orderby']  = 'meta_value_num';
+				$args['meta_key'] = 'blogxer_views';
+			} else {
+				$args['orderby'] = $post_sorting;
+			}
+			
+			$query = new WP_Query( $args );
+			
+			$temp = BlogxerTheme_Helper::wp_set_temp_query( $query );
+			
+			if ( $query->have_posts() ) {	
+				while ( $query->have_posts() ) {
+				$query->the_post();
+				$content = wp_trim_words( get_the_excerpt(), $content_limit, '' );		
+				$title = wp_trim_words( get_the_title(), $title_limit, '' );
+				$blogxer_comments_number = number_format_i18n( get_comments_number() );
+				$blogxer_comments_html = $blogxer_comments_number == 1 ? esc_html__( 'Comment' , 'blogxer-core' ) : esc_html__( 'Comments' , 'blogxer-core' );
+				$blogxer_comments_html = $blogxer_comments_number . ' ' . $blogxer_comments_html;
+				if ( !empty( $data['post_date_format'] ) ) {
+					if ( $data['post_date_format'] == 'global' ){
+						$formatted_post_date = get_the_date(); 
+					} else {
+						$formatted_post_date = get_the_date( 'M d, Y' );
+					}
+				}
+		?>
+	<?php if ( $y == 1 ) { ?>
+	<div class="col-lg-6 col-md-12 col-sm-12 col-12">
+		<div class="rtin-single-post">
+			<div class="rtin-img">
+			<a href="<?php the_permalink(); ?>">
+				<?php
+					if ( has_post_thumbnail() ){
+						the_post_thumbnail( $thumb_size1 );
+					}
+					else {
+						if ( !empty( BlogxerTheme::$options['no_preview_image']['id'] ) ) {
+							echo wp_get_attachment_image( BlogxerTheme::$options['no_preview_image']['id'], $thumb_size1 );
+						}
+						else {
+							echo '<img class="wp-post-image" src="' . BlogxerTheme_Helper::get_img( 'noimage_450X330.jpg' ) . '" alt="'.get_the_title().'">';
+						}
+					}
+				?>
+			</a>
+			<?php if ( get_post_format( get_the_ID() ) == 'video' ) { ?>
+			<div class="post-video-icon">
+				<a href="<?php the_permalink(); ?>" class="video-play"><i class="fa fa-play"></i></a>
+			</div>
+			<?php } ?>
+			</div>
+			<div class="rtin-content">
+				<?php if ( $blogxer_has_entry_meta ) { ?>
+				<div class="post-meta">
+					<ul>
+						<?php if ( $data['author_display']  == 'yes' ) { ?>
+						<li><i class="fa fa-user" aria-hidden="true"></i><?php the_author_posts_link(); ?></li>
+						<?php } if ( $data['date_display']  == 'yes' ) { ?>
+						<li><i class="fa fa-calendar-o" aria-hidden="true"></i><?php echo get_the_date(); ?></li>
+						<?php } if ( $data['cat_display']  == 'yes' ) { ?>		
+						<li class="blog-cat"><i class="fa fa-tag" aria-hidden="true"></i><?php echo the_category( ', ' );?></li>
+						<?php } if ( $data['read_time_display']  == 'yes' ) { ?>
+						<li class="meta-reading-time meta-item"> <?php echo blogxer_reading_time(); ?></li>
+						<?php } ?>
+					</ul>
+				</div>
+				<?php } ?>
+				<h3 class="rtin-title"><a href="<?php the_permalink();?>"><?php echo esc_html( $title );?></a></h3><?php if ( $data['content_display']  == 'yes' ) { ?><?php echo wp_kses_post( $content );?><?php } ?>
+				<?php if ( ( $data['button_display']  == 'yes' ) || ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+				<div class="post-footer">
+					<?php if ( $data['button_display']  == 'yes' ) { ?>
+						<a class="item-btn" href="<?php the_permalink(); ?>"><span><?php esc_html_e( 'READ MORE', 'blogxer-core' ); ?></span><?php if ( is_rtl() ) { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } else { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } ?></a>
+					<?php } ?>
+					<?php if ( ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+					<div class="post-meta">
+						<ul>
+							<?php if ( $data['view_display']  == 'yes' ) { ?>
+							<li><span class="meta-views meta-item "><?php echo blogxer_views(); ?></span></li>
+							<?php } if ( $data['comment_display']  == 'yes' ) { ?>
+							<li><i class="fa fa-comment-o" aria-hidden="true"></i><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo esc_html( $blogxer_comments_html );?></a></li>
+							<?php } ?>
+						</ul>
+					</div>
+					<?php } ?>
+				</div>
+				<?php } ?>
+			</div>
+		</div>
+	</div>	
+	<?php } ?>
+	<?php if ( $y > 1 && $y < 4 && $y != 3 ) { ?>
+	<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+	<?php } ?>
+	<?php if ( $y == 2 || $y == 3 ) { ?>
+	<div class="rtin-single-post">
+		<div class="rtin-img">
+		<a href="<?php the_permalink(); ?>">
+			<?php
+				if ( has_post_thumbnail() ){
+					the_post_thumbnail( $thumb_size1 );
+				}
+				else {
+					if ( !empty( BlogxerTheme::$options['no_preview_image']['id'] ) ) {
+						echo wp_get_attachment_image( BlogxerTheme::$options['no_preview_image']['id'], $thumb_size1 );
+					}
+					else {
+						echo '<img class="wp-post-image" src="' . BlogxerTheme_Helper::get_img( 'noimage_450X330.jpg' ) . '" alt="'.get_the_title().'">';
+					}
+				}
+			?>
+		</a>
+		<?php if ( get_post_format( get_the_ID() ) == 'video' ) { ?>
+		<div class="post-video-icon">
+			<a href="<?php the_permalink(); ?>" class="video-play"><i class="fa fa-play"></i></a>
+		</div>
+		<?php } ?>
+		</div>
+		<div class="rtin-content small-content">
+			<?php if ( $blogxer_has_entry_meta ) { ?>
+			<div class="post-meta">
+				<ul>
+					<?php if ( $data['author_display']  == 'yes' ) { ?>
+					<li><i class="fa fa-user" aria-hidden="true"></i><?php the_author_posts_link(); ?></li>
+					<?php } if ( $data['date_display']  == 'yes' ) { ?>
+					<li><i class="fa fa-calendar-o" aria-hidden="true"></i><?php echo get_the_date(); ?></li>
+					<?php } if ( $data['cat_display']  == 'yes' ) { ?>		
+					<li class="blog-cat"><i class="fa fa-tag" aria-hidden="true"></i><?php echo the_category( ', ' );?></li>
+					<?php } if ( $data['read_time_display']  == 'yes' ) { ?>
+					<li class="meta-reading-time meta-item"> <?php echo blogxer_reading_time(); ?></li>
+					<?php } ?>
+				</ul>
+			</div>
+			<?php } ?>
+			<h3 class="rtin-title"><a href="<?php the_permalink();?>"><?php echo esc_html( $title );?></a></h3><?php if ( $data['content_display']  == 'yes' ) { ?><?php echo wp_kses_post( $content );?><?php } ?>
+			<?php if ( ( $data['button_display']  == 'yes' ) || ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+			<div class="post-footer">
+				<?php if ( $data['button_display']  == 'yes' ) { ?>
+					<a class="item-btn" href="<?php the_permalink(); ?>"><span><?php esc_html_e( 'READ MORE', 'blogxer-core' ); ?></span><?php if ( is_rtl() ) { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } else { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } ?></a>
+				<?php } ?>
+				<?php if ( ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+				<div class="post-meta">
+					<ul>
+						<?php if ( $data['view_display']  == 'yes' ) { ?>
+						<li><span class="meta-views meta-item "><?php echo blogxer_views(); ?></span></li>
+						<?php } if ( $data['comment_display']  == 'yes' ) { ?>
+						<li><i class="fa fa-comment-o" aria-hidden="true"></i><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo esc_html( $blogxer_comments_html );?></a></li>
+						<?php } ?>
+					</ul>
+				</div>
+				<?php } ?>
+			</div>
+			<?php } ?>
+		</div>
+	</div>
+	<?php } ?>
+	<?php if ( $y == 4 ) { ?>
+	</div>
+	<?php } ?>
+	<?php if ( $y == 4 ) { ?>
+	<div class="col-lg-3 col-md-6 col-sm-12 col-12">
+		<div class="rtin-single-post padding-3">
+			<div class="rtin-img">
+			<a href="<?php the_permalink(); ?>">
+				<?php
+					if ( has_post_thumbnail() ){
+						the_post_thumbnail( $thumb_size2 );
+					}
+					else {
+						if ( !empty( BlogxerTheme::$options['no_preview_image']['id'] ) ) {
+							echo wp_get_attachment_image( BlogxerTheme::$options['no_preview_image']['id'], $thumb_size2 );
+						}
+						else {
+							echo '<img class="wp-post-image" src="' . BlogxerTheme_Helper::get_img( 'noimage_425X710.jpg' ) . '" alt="'.get_the_title().'">';
+						}
+					}
+				?>
+			</a>
+			<?php if ( get_post_format( get_the_ID() ) == 'video' ) { ?>
+			<div class="post-video-icon">
+				<a href="<?php the_permalink(); ?>" class="video-play"><i class="fa fa-play"></i></a>
+			</div>
+			<?php } ?>
+			</div>
+			<div class="rtin-content small-content">
+				<?php if ( $blogxer_has_entry_meta ) { ?>
+				<div class="post-meta">
+					<ul>
+						<?php if ( $data['author_display']  == 'yes' ) { ?>
+						<li><i class="fa fa-user" aria-hidden="true"></i><?php the_author_posts_link(); ?></li>
+						<?php } if ( $data['date_display']  == 'yes' ) { ?>
+						<li><i class="fa fa-calendar-o" aria-hidden="true"></i><?php echo get_the_date(); ?></li>
+						<?php } if ( $data['cat_display']  == 'yes' ) { ?>		
+						<li class="blog-cat"><i class="fa fa-tag" aria-hidden="true"></i><?php echo the_category( ', ' );?></li>
+						<?php } if ( $data['read_time_display']  == 'yes' ) { ?>
+						<li class="meta-reading-time meta-item"> <?php echo blogxer_reading_time(); ?></li>
+						<?php } ?>
+					</ul>
+				</div>
+				<?php } ?>
+				<h3 class="rtin-title"><a href="<?php the_permalink();?>"><?php echo esc_html( $title );?></a></h3><?php if ( $data['content_display']  == 'yes' ) { ?><?php echo wp_kses_post( $content );?><?php } ?>
+				<?php if ( ( $data['button_display']  == 'yes' ) || ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+				<div class="post-footer">
+					<?php if ( $data['button_display']  == 'yes' ) { ?>
+						<a class="item-btn" href="<?php the_permalink(); ?>"><span><?php esc_html_e( 'READ MORE', 'blogxer-core' ); ?></span><?php if ( is_rtl() ) { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } else { ?><i class="fa fa-arrow-right" aria-hidden="true"></i><?php } ?></a>
+					<?php } ?>
+					<?php if ( ( $data['view_display']  == 'yes' ) || ( $data['comment_display']  == 'yes' ) ) { ?>
+					<div class="post-meta">
+						<ul>
+							<?php if ( $data['view_display']  == 'yes' ) { ?>
+							<li><span class="meta-views meta-item "><?php echo blogxer_views(); ?></span></li>
+							<?php } if ( $data['comment_display']  == 'yes' ) { ?>
+							<li><i class="fa fa-comment-o" aria-hidden="true"></i><a href="<?php echo get_comments_link( get_the_ID() ); ?>"><?php echo esc_html( $blogxer_comments_html );?></a></li>
+							<?php } ?>
+						</ul>
+					</div>
+					<?php } ?>
+				</div>
+				<?php } ?>
+			</div>
+		</div>
+	</div>
+	<?php } ?>			
+
+		<?php $y++; } ?>
+		<?php } ?>	
+	<?php BlogxerTheme_Helper::wp_reset_temp_query( $temp );?>
+	<?php } ?>
+	</div>
+</div>
