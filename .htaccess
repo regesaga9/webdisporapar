@@ -1,4 +1,5 @@
-Options -indexes
+Options -Indexes
+
 # BEGIN LSCACHE
 ## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
 <IfModule LiteSpeed>
@@ -28,25 +29,34 @@ CacheKeyModify -qs:_ga
 </IfModule>
 ## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
 # END LSCACHE
+
 # BEGIN NON_LSCACHE
 ## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
 ## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
 # END NON_LSCACHE
+
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.
 # Any changes to the directives between these markers will be overwritten.
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
+
+# Menjaga header Authorization untuk REST API, dll.
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Kalau akses root domain, arahkan ke /web/
+RewriteCond %{REQUEST_URI} !^/web/
+RewriteRule ^(.*)$ /web/$1 [L]
+
 RewriteBase /web/
 RewriteRule ^index\.php$ - [L]
+
+# Jika bukan file atau folder fisik → arahkan ke /web/index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /web/index.php [L]
 </IfModule>
 
 # END WordPress
-
-# RewriteEngine On
-# RewriteRule ^web/(.*)$ /$1 [L,R=301]

